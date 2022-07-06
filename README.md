@@ -109,6 +109,8 @@ rails db:setup
 ## 🏁 Start the App
 ```bash
 rails s
+cmd + t
+./bin/webpack-dev-server
 ```
 
 See what is available already in the application.
