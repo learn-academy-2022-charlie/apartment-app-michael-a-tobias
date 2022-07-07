@@ -17,14 +17,14 @@ export default class ApartmentIndex extends Component {
               <Card key={index}>
                 <CardImg top width="100%" src={value.image} alt="Card image cap" />
                 <CardBody>
-                  <CardTitle>{value.street}</CardTitle>
+                  <CardTitle>Address: {value.street}</CardTitle>
                   <CardSubtitle>{value.city}</CardSubtitle>
                   <CardText>{value.state}</CardText>
-                  <CardText>{value.manager}</CardText>
-                  <CardText>{value.price}</CardText>
-                  <CardText>{value.bedrooms}</CardText>
-                  <CardText>{value.bathrooms}</CardText>
-                  <CardText>{value.pets}</CardText>
+                  <CardText>Manager: {value.manager}</CardText>
+                  <CardText>Price: {value.price}</CardText>
+                  <CardText>Bedrooms: {value.bedrooms}</CardText>
+                  <CardText>Bathrooms: {value.bathrooms}</CardText>
+                  <CardText>Allows pets:{value.pets}</CardText>
                   <Button>Button</Button>
                 </CardBody>
               </Card>

@@ -14,13 +14,13 @@ class Header extends Component {
     console.log("current_user:", current_user)
     return (
       <>
-        <h1>Apartment App</h1>
+        <h1>DALL-E Apartments</h1>
         <Nav>
           <NavItem>
-              <a href={"/"} className="nav-link">Home</a>
+            <a href={"/"} className="nav-link">Home</a>
           </NavItem>
           <NavItem>
-              <a href={"/apartmentindex"} className="nav-link">Apartments</a>
+            <a href={"/apartmentindex"} className="nav-link">Apartments</a>
           </NavItem>
           {logged_in &&
             <NavItem>
