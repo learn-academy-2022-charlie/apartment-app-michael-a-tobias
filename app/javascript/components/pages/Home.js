@@ -5,7 +5,6 @@ export default class Home extends Component {
     return (
       <>
         <h3>Welcome to Apartment App. You'll find a home in no time.</h3>
-        <p></p>
       </>
     )
   }
