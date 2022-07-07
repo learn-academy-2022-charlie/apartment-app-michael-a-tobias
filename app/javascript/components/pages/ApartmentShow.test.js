@@ -14,9 +14,31 @@ import ApartmentShow from './ApartmentShow'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe("When ApartmentShow renders", () => {
-  it("displays a heading", () => {
-    const apartmentShow = shallow(<ApartmentShow />)
-    const apartmentShowHeading = apartmentShow.find("h3")
-    expect(apartmentShowHeading.text()).toEqual("This Should Fail")
+  let apartment = {
+    bathrooms: 1,
+    bedrooms: 1,
+    city: "New Foundland",
+    created_at: "2022-07-06T23:09:23.605Z",
+    email: "peter67@yahoo.com",
+    id: 1,
+    image: "https://thiscatdoesnotexist.com/",
+    manager: "Peter Petigrew",
+    pets: "No",
+    price: "$250,000",
+    state: "ND",
+    street: "123 Snoring Ln.",
+    updated_at: "2022-07-06T23:09:23.605Z",
+    user_id: 1
+  }
+
+
+  let apartmentShow
+  beforeEach(() => {
+    apartmentShow = shallow(<ApartmentShow apartment={apartment} />)
+  })
+
+  it("displays a card", () => {
+    const apartmentShowRender = apartmentShow.find('Card')
+    expect(apartmentShowRender.length).toEqual(1)
   })
 })

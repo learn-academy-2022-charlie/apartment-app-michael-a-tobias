@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Nav, NavItem } from 'reactstrap'
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
@@ -24,9 +25,11 @@ export default class ApartmentIndex extends Component {
                   <CardText>Price: {value.price}</CardText>
                   <CardText>Bedrooms: {value.bedrooms}</CardText>
                   <CardText>Bathrooms: {value.bathrooms}</CardText>
-                  <CardText>Allows pets:{value.pets}</CardText>
-                  <Button>Button</Button>
+                  <CardText>Allows pets: {value.pets}</CardText>
                 </CardBody>
+                <NavItem>
+                  <a href={`/apartmentshow/${value.id}`} className="nav-link">Details</a>
+                </NavItem>
               </Card>
             )
           })
