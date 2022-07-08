@@ -40,14 +40,10 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/apartmentindex" render={props => <ApartmentIndex apartments={this.state.apartments} />} />
-          {/* WORKING ON PROTECTED INDEX */}
-
           <Route path="/protectedindex" render={props => {
             let myApartments = this.state.apartments.filter(apart => apart.user_id === current_user.id)
             return < ProtectedIndex apartments={myApartments} />
           }} />
-
-          {/* END WORK PROTECTED INDEX */}
           <Route path="/apartmentshow/:id" render={(props) => {
             let id = props.match.params.id
             let apartment = this.state.apartments.find((apartmentSingular) =>
