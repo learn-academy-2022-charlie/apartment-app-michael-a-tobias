@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Nav, NavItem } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 class Header extends Component {
   render() {
@@ -20,8 +21,13 @@ class Header extends Component {
             <a href={"/"} className="nav-link">Home</a>
           </NavItem>
           <NavItem>
-            <a href={"/apartmentindex"} className="nav-link">Apartments</a>
+            <a href={"/apartmentindex"} className="nav-link">Listings</a>
           </NavItem>
+          {logged_in &&
+            <NavItem>
+              <a href={'/protectedindex'} className="nav-link">My Listings</a>
+            </NavItem>
+          }
           {logged_in &&
             <NavItem>
               <a href={sign_out_route} className="nav-link">Sign Out</a>
