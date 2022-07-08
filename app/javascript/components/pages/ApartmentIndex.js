@@ -11,7 +11,7 @@ export default class ApartmentIndex extends Component {
     console.log("INDEX", apartments)
     return (
       <>
-        <h3>ApartmentIndex</h3>
+        <h3>All Listings</h3>
         <div>
           {apartments && apartments.map((value, index) => {
             return (
@@ -19,13 +19,8 @@ export default class ApartmentIndex extends Component {
                 <CardImg top style={{ width: '10rem' }} src={value.image} alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Address: {value.street}</CardTitle>
-                  <CardSubtitle>{value.city}</CardSubtitle>
-                  <CardText>{value.state}</CardText>
-                  <CardText>Manager: {value.manager}</CardText>
-                  <CardText>Price: {value.price}</CardText>
-                  <CardText>Bedrooms: {value.bedrooms}</CardText>
-                  <CardText>Bathrooms: {value.bathrooms}</CardText>
-                  <CardText>Allows pets: {value.pets}</CardText>
+                  <CardSubtitle>City: {value.city}</CardSubtitle>
+                  <CardText>State: {value.state}</CardText>
                 </CardBody>
                 <NavItem>
                   <a href={`/apartmentshow/${value.id}`} className="nav-link">Details</a>
